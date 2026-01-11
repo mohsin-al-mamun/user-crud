@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./Card.module.css";
 import { PencilLine, Trash2 } from "lucide-react";
+import { Link } from "react-router";
 
-export default function Card({ name, designation }) {
+export default function Card({ name, designation, id }) {
   return (
     <div className={styles.container}>
       <div className={styles.image_div}>
@@ -25,7 +26,9 @@ export default function Card({ name, designation }) {
           <div className={styles.edit_icon}>
             <PencilLine size={20} />
           </div>
-          <div className={styles.details_btn}>View Details</div>
+          <div className={styles.details_btn}>
+            <Link to={`/user/${id}`}> View Details </Link>
+          </div>
           <div className={styles.delete_icon}>
             <Trash2 size={20} />
           </div>

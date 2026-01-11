@@ -83,4 +83,9 @@
   background-color: #eee4f5;
   padding: 10px;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.details_btn a {
+  text-decoration: none;
 }
